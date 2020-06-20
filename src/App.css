@@ -1,0 +1,29 @@
+:root {
+    --primary-color: #FF5271;
+    --secundary-color: #175190;
+    --terciary-color: #f0f0f5;
+    --title-color: #003466;
+    --text-color: #83909E;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background: white;
+    -webkit-font-smoothing: antialiased;
+    color: var(--text-color);
+  }
+  
+  body, input, button {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--title-color);
+    font-family: Patua One;
+  }
+  
