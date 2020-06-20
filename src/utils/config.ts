@@ -16,4 +16,4 @@ switch (process.env.NODE_ENV) {
 }
 dotenv.config({ path: path });
 
-export const APP_ID = process.env.REACT_APP_API_URL;
+export const APP_ID = process.env.BASE_URL;
