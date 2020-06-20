@@ -1,0 +1,260 @@
+#login-page {
+    width: 100%;
+    height: 100vh;
+    background: url('../../assets/login-background.svg') no-repeat right;
+    background-size: contain;
+}
+
+#login-page .content {
+    width: 100%;
+    height: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#login-page .content header {
+    padding: 48px 0 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#login-page .content header img {
+    cursor: pointer;
+}
+
+#login-page .content main {
+    flex: 1;
+    max-width: 560px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#login-page .content main h1 {
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 46px;
+    animation: zoom 800ms ease;
+}
+
+form {
+    animation: fade-bottom 1s ease;
+}
+
+form .field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+form .field label {
+    margin-bottom: 3px;
+    font-size: 25px;
+}
+
+form .field input {
+    height: 45px;
+    font-size: 15;
+    border: 2px solid #E5E5EC;
+    border-radius: 8px;
+    padding-left: 13px;
+    padding-right: 13px;
+    font-size: 15;
+    color: var(--background-color);
+}
+
+form .field input::placeholder {
+    color: var(--background-color);
+}
+
+form button {
+    margin-top: 18px;
+    background: var(--secundary-color);
+    border: 0;
+    border-radius: 8px;
+    height: 60px;
+    width: 100%;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+    transition: background-color 400ms;
+}
+
+form button:hover {
+    background: #004280;
+}
+
+form .line1 {
+    margin-top: 18px;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+form .line1 .check {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+}
+
+form .line1 .check span {
+    display: flex;
+    width: 15px;
+    height: 15px;
+    border: 2px solid #83909E;
+    border-radius: 4px;
+    align-items: center;
+    justify-content: center;
+}
+
+form .line1 .check span span {
+    display: none;
+}
+
+form .line1 .check span span.selected {
+    display: flex;
+    align-self: center;
+    width: 7.5px;
+    height: 7.5px;
+    border: 0;
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+form .line1 .check p {
+    margin-left: 2px;
+    font-size: 12px;
+}
+
+form .line1 a {
+    color: var(--primary-color);
+    font-size: 12px;
+}
+
+form .line2 {
+    margin-top: 18px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 36px;
+}
+
+form .line2 p {
+    font-size: 12px;
+}
+
+form .line2 a {
+    margin-left: 5px;
+    color: var(--primary-color);
+    font-size: 12px;
+}
+
+#modal {
+    background-color: #0e0a14ef;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation:fade 500ms ease;
+}
+
+#modal.hide {
+    display: none;
+}
+
+#modal .content {
+    color: white;
+    width: 460px;
+}
+
+#modal .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 48px;
+}
+
+#modal .header a {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    font-size: 0.01px;
+}
+
+#modal .header a svg {
+    width: 40px;
+    height: 40px;
+    color: white;
+}
+
+#modal .header h1 {
+    color: white;
+    font-size: 30px;
+    line-height: 42px;
+}
+
+#modal .content main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 15px;
+}
+
+#modal .content main .professor,
+#modal .content main .aluno {
+    display: flex;
+    cursor: pointer;
+    background: #E1F0FF;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 250px;
+    width: 200px;
+    border-radius: 8px;
+    transition: all 100ms ease;
+}
+
+#modal .content main .professor:hover,
+#modal .content main .aluno:hover {
+    border: #FF5271 solid 2px;
+    transform: translateY(-10px);
+    animation: expand 100ms ease;
+}
+
+@keyframes expand {
+    0% {
+        transform: translateY(0px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+#modal .content main label {
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 12px;
+    color: var(--secundary-color);
+}
+
+@media(max-width: 900px) {
+    #login-page {
+        background: white;
+    }
+    #login-page .content {
+        align-items: center;
+        text-align: center;
+    }
+}

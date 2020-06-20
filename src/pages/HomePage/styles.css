@@ -1,0 +1,125 @@
+#home-page {
+    height: 100vh;
+}
+
+#home-page .content {
+    width: 100%;
+    height: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#home-page .content header {
+    margin: 48px 0 0;
+    padding-bottom: 12px;
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid #f0f0f5;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#home-page header img.logo {
+    cursor: pointer;
+}
+
+#home-page .content header .user {
+    display: flex;
+    align-items: center;
+}
+
+#home-page .content header .user h3 {
+    font-weight: normal;
+    font-size: 24px;
+    font-family: Roboto;
+    margin-right: 24px;
+    animation: fade-left-wait 1500ms ease;
+}
+
+@keyframes fade-left-wait {
+    0% {
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+#home-page .content header .user img {
+    cursor: pointer;
+    object-fit: cover;
+    height: 64px;
+    width: 64px;
+    border-radius: 50%;
+    animation: fade 1s ease;
+}
+
+#home-page .content main {
+    margin-top: 32px;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+}
+
+#home-page .content main .teacher {
+    cursor: pointer;
+    width: 200px;
+    height: 250px;
+    background: #f0f0f5;
+    border-radius: 8px;
+    margin-left: 12px;
+    margin-right: 12px;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 400ms;
+    animation: fade 1s ease;
+}
+
+#home-page .content main .teacher:hover {
+    background: #E5E5EC;
+}
+
+#home-page .content .teacher img {
+    object-fit: cover;
+    margin: auto;
+    display: flex;
+    margin-top: 16px;
+    height: 120px;
+    width: 120px;
+    margin-bottom: 16px;
+    border-radius: 60px;
+}
+
+#home-page .content .teacher h3 {
+    font-size: 24px;
+    color: black;
+    font-family: Roboto;
+    margin: auto;
+    text-align: center;
+    font-weight: normal;
+    margin-bottom: 12px;
+}
+
+#home-page .content .teacher h4 {
+    font-size: 16px;
+    margin: auto;
+    width: 100px;
+    background-color: var(--primary-color);
+    border-radius: 20px;
+    color: white;
+    font-family: Roboto;
+    margin: auto;
+    text-align: center;
+    font-weight: bold;
+}
