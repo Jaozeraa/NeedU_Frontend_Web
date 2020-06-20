@@ -7,6 +7,7 @@ import './styles.css'
 
 const InitialPage = () => {
     return (
+    <div style={{height: 100}}>
         <div id="initial-page">
             <div className="content">
                 <header>
@@ -36,6 +37,7 @@ const InitialPage = () => {
                 </main>
             </div>
         </div>
+    </div>
     )
 }
 
