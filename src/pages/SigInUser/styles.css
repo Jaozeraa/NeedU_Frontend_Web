@@ -234,3 +234,28 @@
     background: #CBE5FF;
     border: 2px solid var(--secundary-color);
 }
+
+@media(max-width: 900px) {
+    #signin-page form .field-group {
+        flex-direction: column;
+    }
+    #signin-page form .field-group-input {
+        flex-direction: column;
+    }
+    #signin-page form .field-group .field+.field {
+        margin-left: 0px;
+    }
+    #signin-page form .field-group-input .field+.field {
+        margin-left: 0px;
+    }
+    #signin-page form button {
+        align-self: center;
+    }
+    .items-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        list-style: none;
+    }
+    
+}

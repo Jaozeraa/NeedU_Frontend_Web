@@ -36,3 +36,10 @@
     height: 24px;
     margin-bottom: 8px;
 }
+
+@media(max-width: 900px) {
+    .dropzone {
+        height: 300px;
+        width: 300px;
+    }
+}
