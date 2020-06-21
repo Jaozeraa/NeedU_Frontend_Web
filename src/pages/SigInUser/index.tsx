@@ -81,6 +81,22 @@ const SigInUser = () => {
         const uf = selectedUf
         const city = selectedCity
 
+        if(!selectedFile) {
+            return alert('Selecione uma foto sua')
+        }
+
+        if(sex === '0') {
+            return alert('Selecione seu sexo')
+        }
+
+        if(selectedUf === '0') {
+            return alert('Selecione seu estado')
+        }
+
+        if(selectedCity === '0') {
+            return alert('Selecione sua cidade')
+        }
+
         const data = new FormData()
             data.append('name', name)
             data.append('email', email)
