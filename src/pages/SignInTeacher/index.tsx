@@ -119,6 +119,30 @@ const SigInTeacher = () => {
         const [latitude, longitude] = selectedPosition
         const subjects = selectedSubjects
 
+        if(!selectedFile) {
+            return alert('Selecione uma foto sua')
+        }
+
+        if(sex === '0') {
+            return alert('Selecione seu sexo')
+        }
+
+        if(latitude === 0 && longitude === 0) {
+            return alert('Coloque seu endereço no mapa clicando na sua localização')
+        }
+
+        if(selectedUf === '0') {
+            return alert('Selecione seu estado')
+        }
+
+        if(selectedCity === '0') {
+            return alert('Selecione sua cidade')
+        }
+
+        if(subjects[0] === undefined) {
+            return alert('Selecione ao menos uma matéria que deseja ensinar')
+        }
+
         const data = new FormData()
             data.append('name', name)
             data.append('email', email)
@@ -131,10 +155,7 @@ const SigInTeacher = () => {
             data.append('latitude', String(latitude))
             data.append('longitude', String(longitude))
             data.append('subjects', subjects.join(','))
-
-            if (selectedFile) {
-                data.append('image', selectedFile)
-            }
+            data.append('image', selectedFile)
 
         await api.post('teachers', data)
 
